@@ -1,4 +1,4 @@
-# UpdatedPortfolio# 🚀 AI-Assisted Personal Portfolio
+🚀 AI-Assisted Personal Portfolio
 
 A modern and premium personal portfolio website developed with the assistance of **Claude AI**.
 
