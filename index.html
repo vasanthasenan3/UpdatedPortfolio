@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vasanthasenan R | .NET Developer</title>
+<meta name="description" content="Portfolio of Vasanthasenan R, a .NET developer building web and Windows apps with C#, ASP.NET Core, WPF, SQL Server and Azure.">
+<meta name="theme-color" content="#07060a">
+<meta property="og:title" content="Vasanthasenan R | .NET Developer">
+<meta property="og:description" content="Mechanical engineer by degree, .NET developer by choice. C#, ASP.NET Core, WPF, SQL Server and Azure.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23e5253a'/%3E%3Ctext x='32' y='45' font-size='34' font-family='Impact,Arial' font-weight='700' text-anchor='middle' fill='white'%3EVR%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+<noscript><style>#loader,#pick{display:none!important}</style></noscript>
+</head>
+<body>
+
+<!-- liquid glass lens (used by Chromium only, see script.js) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency=".008 .014" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="4" result="nb"/>
+    <feDisplacementMap in="SourceGraphic" in2="nb" scale="18" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><i class="dot"></i><i class="ring"></i></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="orbs" aria-hidden="true"><i class="o1"></i><i class="o2"></i><i class="o3"></i></div>
+
+<!-- cinematic loader -->
+<div id="loader" aria-hidden="true">
+  <div class="ld-top"><span>Vasanthasenan R</span><span>Portfolio &middot; 2026</span></div>
+  <div class="ld-mid">
+    <div class="ld-vr"><span><i>V</i></span><span><i>R</i></span></div>
+    <div class="ld-bar"><i id="ldBar"></i></div>
+  </div>
+  <div class="ld-bot"><span id="ldPct">000</span><span>Loading the first episode</span></div>
+</div>
+
+<!-- profile picker -->
+<div id="pick" role="dialog" aria-label="Choose a profile" hidden>
+  <h2>Who's watching?</h2>
+  <div class="profiles">
+    <button class="prof" data-p="recruiter"><span class="av glass" style="--c:#e5253a">R</span><b>Recruiter</b><small>Experience, skills and projects</small></button>
+    <button class="prof" data-p="developer"><span class="av glass" style="--c:#2f8fd6">&lt;/&gt;</span><b>Developer</b><small>Projects and tech stack first</small></button>
+    <button class="prof" data-p="story"><span class="av glass" style="--c:#e9a62a">M</span><b>Curious</b><small>The mechanical to .NET story</small></button>
+  </div>
+  <button class="skip glass" id="skip" type="button">Skip, show me everything</button>
+</div>
+
+<div class="shell">
+  <header class="nav glass" id="nav">
+    <a class="logo" href="#top">VASANTH</a>
+    <nav aria-label="Sections">
+      <a href="#journey" data-scr>Journey</a><a href="#originals" data-scr>Projects</a><a href="#skills" data-scr>Skills</a><a href="#contact" data-scr>Contact</a>
+    </nav>
+    <button class="watching" id="switch" type="button">Watching as <b id="who">Everyone</b></button>
+  </header>
+
+  <!-- HERO -->
+  <div id="top" class="hero">
+    <canvas id="fx" aria-hidden="true"></canvas>
+    <div class="hero-text">
+      <div class="eyebrow"><i class="live"></i>A one-person series &middot; Season 3</div>
+      <h1 id="name" aria-label="Vasanthasenan R"><span class="nm">VASANTHASENAN</span><span class="ini">R</span></h1>
+      <p class="role"><span id="typed">.NET Developer</span><span class="caret"></span></p>
+      <p class="lead">Mechanical engineer by degree, .NET developer by choice. I build web and Windows apps in C#, ASP.NET Core, WPF and SQL Server, and take them live on Azure.</p>
+      <div class="tags"><span class="tag glass">B.E. 2026</span><span class="tag glass">ASP.NET Core</span><span class="tag glass">WPF</span><span class="tag glass">SQL Server</span><span class="tag glass">Azure</span></div>
+      <div class="btns">
+        <a class="btn play magnet" href="#journey" data-scr><span>&#9654; Watch the story</span></a>
+        <a class="btn more glass magnet" href="#originals" data-scr><span>See the projects</span></a>
+      </div>
+    </div>
+    <div class="poster-wrap">
+      <div class="poster-stage" id="stage">
+        <div class="poster glass" aria-hidden="true">
+          <span class="ring"></span>
+          <span class="vr">VR</span>
+          <i>.NET Developer &middot; 2026</i>
+        </div>
+        <span class="badge glass" data-depth="1.6" style="--x:-8%;--y:12%">C#</span>
+        <span class="badge glass" data-depth="2.4" style="--x:78%;--y:4%">ASP.NET Core</span>
+        <span class="badge glass" data-depth="1.2" style="--x:90%;--y:46%">WPF</span>
+        <span class="badge glass" data-depth="2.8" style="--x:-14%;--y:62%">SQL Server</span>
+        <span class="badge glass" data-depth="1.9" style="--x:62%;--y:90%">Azure</span>
+      </div>
+    </div>
+    <a class="cue" href="#explore" data-scr aria-label="Scroll down"><span></span></a>
+  </div>
+
+  <div class="marquees" aria-hidden="true">
+    <div class="mq" data-dir="-1"><div class="mt" data-t="C#|ASP.NET Core|WPF|XAML|SQL Server|Entity Framework Core|Azure|Web API"></div></div>
+    <div class="mq alt" data-dir="1"><div class="mt" data-t="MVC|MVVM|ADO.NET|Git|Swagger|Postman|Agile Scrum|Three-Tier"></div></div>
+  </div>
+
+  <main>
+    <section id="explore">
+      <div class="eyebrow">Start here</div>
+      <h2 class="split">Continue Exploring</h2>
+      <div class="row">
+        <a class="tile glass rv t1" data-scr data-tilt href="#journey"><small>Season 1 to 3</small><b>My Journey</b><em style="--w:78%"></em></a>
+        <a class="tile glass rv t2" data-scr data-tilt href="#originals"><small>2 episodes</small><b>Originals: Projects</b><em style="--w:52%"></em></a>
+        <a class="tile glass rv t3" data-scr data-tilt href="#skills"><small>Full stack .NET</small><b>Skill Universe</b><em style="--w:90%"></em></a>
+        <a class="tile glass rv t4" data-scr data-tilt href="#strengths"><small>How I work</small><b>Key Strengths</b><em style="--w:34%"></em></a>
+      </div>
+    </section>
+
+    <section id="journey">
+      <div class="eyebrow">The full story</div>
+      <h2 class="split">My Journey</h2>
+      <p class="sub rv">Three seasons so far. The next one is still being written.</p>
+      <div class="seasons" id="seasons">
+        <span class="line"><span class="fill" id="lineFill"></span></span>
+        <article class="ep glass rv"><div class="no">S01</div><div><h3>Mechanical Engineering</h3><div class="meta">2020 &ndash; 2026 &middot; Anna University Regional Campus, Madurai</div><p>B.E. Mechanical Engineering, 74.3%. The degree trained me to break big problems into small, testable steps, and I still work that way in code.</p></div></article>
+        <article class="ep glass rv"><div class="no">S02</div><div><h3>The Pivot</h3><div class="meta">Into IT through a .NET course</div><p>I moved from mechanical to software by learning the .NET stack: C#, WPF, SQL and the web side of ASP.NET Core.</p></div></article>
+        <article class="ep glass rv"><div class="no">S03</div><div><h3>.NET Developer Intern</h3><div class="meta">March 2026 &ndash; Present &middot; JSDevBrains Digital Pvt. Ltd.</div>
+          <ul class="clean">
+            <li>Build and ship features for ASP.NET Core web apps and WPF desktop apps with C#, XAML, EF Core and SQL Server.</li>
+            <li>Turn requirements into working software: design the tables and stored procedures, then write the API and the UI on top.</li>
+            <li>Deploy websites and Web APIs to Azure App Service and move SQL Server databases to Azure SQL Database.</li>
+            <li>Test every endpoint in Swagger and Postman before handover, then debug what testing finds.</li>
+            <li>Work in Agile Scrum with Git and GitHub, with code reviews both ways, mentored by a senior engineer with 15+ years in IT.</li>
+          </ul></div></article>
+      </div>
+    </section>
+
+    <section id="originals">
+      <div class="eyebrow">Originals</div>
+      <h2 class="split">Projects</h2>
+      <p class="sub rv">Two applications I built end to end in 2026.</p>
+      <div class="stack">
+        <article class="pcard glass" style="--i:0">
+          <div class="pc-info">
+            <div class="pc-k">Episode 01 &middot; Web &middot; 2026</div>
+            <h3>Mentor Booking Platform</h3>
+            <p>A web platform that connects mentees with mentors. Users build a profile and can switch mentoring on at any time. Mentors publish availability and mentees book a session directly.</p>
+            <div class="chips"><span class="chip">ASP.NET Core MVC</span><span class="chip">EF Core</span><span class="chip">Azure SQL</span><span class="chip">OAuth</span><span class="chip">SMTP</span><span class="chip">Bootstrap</span></div>
+            <ul class="clean">
+              <li>Email/password, Google and Facebook login with ASP.NET Core Identity and OAuth.</li>
+              <li>Profile management with photo upload and a one-click mentee/mentor role switch.</li>
+              <li>Mentor availability with recurring time slots, plus search by name, skill or title.</li>
+              <li>Booking workflow with five states that blocks double-booking and self-booking.</li>
+              <li>SMTP emails to mentor and mentee whenever a booking is made or changes status.</li>
+              <li>SQL Server schema: Users, MentorProfiles, Skills, MentorAvailabilities, Appointments.</li>
+            </ul>
+          </div>
+          <div class="pc-vis a1" aria-hidden="true">
+            <div class="mock">
+              <div class="mk-bar"><i></i><i></i><i></i><span>Bookings</span></div>
+              <ul class="mk-list">
+                <li style="--d:0s"><b></b><s></s><em class="p1">Pending</em></li>
+                <li style="--d:2s"><b></b><s></s><em class="p2">Confirmed</em></li>
+                <li style="--d:4s"><b></b><s></s><em class="p3">Rejected</em></li>
+                <li style="--d:6s"><b></b><s></s><em class="p4">Cancelled</em></li>
+                <li style="--d:8s"><b></b><s></s><em class="p5">Completed</em></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard glass" style="--i:1">
+          <div class="pc-info">
+            <div class="pc-k">Episode 02 &middot; Desktop &middot; 2026</div>
+            <h3>Supermarket Billing System</h3>
+            <p>A WPF application that runs a supermarket's daily operations in one place: inventory, sales, customers, staff roles and reporting.</p>
+            <div class="chips"><span class="chip">C#</span><span class="chip">WPF</span><span class="chip">ADO.NET</span><span class="chip">Azure SQL</span></div>
+            <ul class="clean">
+              <li>Product management (add, edit, remove, categorise) with real-time inventory tracking.</li>
+              <li>Stock updates automatically on every sale, so no manual counting errors.</li>
+              <li>Billing module for sales, discounts and receipt printing, with each transaction stored in SQL Server.</li>
+              <li>Customer registration and profiles with full order history.</li>
+              <li>Custom sales and inventory reports that show what sells and what needs restocking.</li>
+            </ul>
+          </div>
+          <div class="pc-vis a2" aria-hidden="true">
+            <div class="mock">
+              <div class="mk-bar"><i></i><i></i><i></i><span>Store</span></div>
+              <div class="mk-grid">
+                <div><span>Inventory</span><u><i></i><i></i><i></i><i></i></u></div>
+                <div><span>Billing</span><u><i></i><i></i><i></i><i></i></u></div>
+                <div><span>Customers</span><u><i></i><i></i><i></i><i></i></u></div>
+                <div><span>Reports</span><u><i></i><i></i><i></i><i></i></u></div>
+                <div><span>Staff roles</span><u><i></i><i></i><i></i><i></i></u></div>
+                <div><span>Receipts</span><u><i></i><i></i><i></i><i></i></u></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="sub rv" style="margin-top:22px">More practice code is on <a href="https://github.com/vasanthasenan3" target="_blank" rel="noopener">GitHub</a>.</p>
+    </section>
+
+    <section id="skills">
+      <div class="eyebrow">Toolkit</div>
+      <h2 class="split">Skill Universe</h2>
+      <p class="sub rv">Web, desktop, data and cloud in one pair of hands.</p>
+      <div class="uni">
+        <div class="sk glass rv w2"><h3>Web</h3><div class="chips"><span class="chip">ASP.NET Core MVC</span><span class="chip">Razor Pages</span><span class="chip">Web API</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Bootstrap</span></div></div>
+        <div class="sk glass rv"><h3>Languages</h3><div class="chips"><span class="chip">C#</span><span class="chip">SQL</span></div></div>
+        <div class="sk glass rv"><h3>Desktop</h3><div class="chips"><span class="chip">WPF</span><span class="chip">XAML</span></div></div>
+        <div class="sk glass rv w2"><h3>Data</h3><div class="chips"><span class="chip">SQL Server</span><span class="chip">T-SQL</span><span class="chip">Stored procedures</span><span class="chip">EF Core</span><span class="chip">ADO.NET</span></div></div>
+        <div class="sk glass rv w2"><h3>Cloud and tools</h3><div class="chips"><span class="chip">Azure App Service</span><span class="chip">Azure SQL Database</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Swagger</span><span class="chip">Postman</span></div></div>
+        <div class="sk glass rv"><h3>Architecture</h3><div class="chips"><span class="chip">OOP</span><span class="chip">MVC</span><span class="chip">MVVM</span><span class="chip">Three-tier</span></div></div>
+        <div class="sk glass rv"><h3>Ways of working</h3><div class="chips"><span class="chip">Agile Scrum</span><span class="chip">TDD</span><span class="chip">Code reviews</span></div></div>
+        <div class="sk glass rv w2"><h3>Auth and integration</h3><div class="chips"><span class="chip">ASP.NET Core Identity</span><span class="chip">OAuth (Google, Facebook)</span><span class="chip">SMTP email</span></div></div>
+      </div>
+    </section>
+
+    <section id="strengths">
+      <div class="eyebrow">Behind the scenes</div>
+      <h2 class="split">Key Strengths</h2>
+      <div class="str">
+        <div class="glass rv"><b>Full-stack .NET</b><span>MVC, Razor Pages and Web API, WPF and Windows Forms, SQL Server with EF Core, and Azure.</span></div>
+        <div class="glass rv"><b>Cloud deployment</b><span>Taking apps from a local build to a live URL on Azure App Service and Azure SQL Database.</span></div>
+        <div class="glass rv"><b>Clean, structured code</b><span>OOP applied through MVC, MVVM and Three-Tier architecture, with test-driven development.</span></div>
+        <div class="glass rv"><b>Engineer's problem solving</b><span>A mechanical background that turns complex problems into small, testable steps.</span></div>
+        <div class="glass rv"><b>Team-ready</b><span>Agile Scrum, Git/GitHub workflows and code reviews in a real project team.</span></div>
+      </div>
+      <div class="edu glass rv">
+        <div><b>B.E. Mechanical Engineering &middot; Anna University Regional Campus, Madurai</b><span>2020 &ndash; 2026 &middot; 74.3%</span></div>
+        <div><b>HSC &middot; Government Higher Secondary School, Thiruchitrambalam</b><span>67.5%</span></div>
+        <div><b>SSLC &middot; Government High School, Seruvaviduthi (South)</b><span>74.8%</span></div>
+        <div><b>Languages</b><span>English, Tamil</span></div>
+      </div>
+    </section>
+
+    <section class="end" id="contact">
+      <div class="eyebrow">Next episode</div>
+      <h2 class="big split">TO BE CONTINUED&hellip;</h2>
+      <p class="sub rv" style="margin:10px auto 0">Open to .NET developer roles. Let's build something together.</p>
+      <a class="mailbig rv" href="mailto:vasanthsenan333@gmail.com"><span id="em">vasanthsenan333@gmail.com</span></a>
+      <div class="btns rv">
+        <a class="btn play magnet" href="https://www.linkedin.com/in/Vasanthsen" target="_blank" rel="noopener"><span>LinkedIn</span></a>
+        <a class="btn more glass magnet" href="https://github.com/vasanthasenan3" target="_blank" rel="noopener"><span>GitHub</span></a>
+        <button class="btn more glass magnet" id="cp" type="button"><span>Copy email</span></button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <span>&copy; 2026 Vasanthasenan R</span>
+    <a href="#top" data-scr class="top">Back to top &uarr;</a>
+  </footer>
+</div>
+
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/lenis.min.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+</html>
